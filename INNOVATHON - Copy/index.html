@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character NFT template</title>
+    <meta property="og:title" content="Character NFT template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 26px;
+      }
+
+      body {
+        font-weight: 700;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+        fill: var(--dl-color-gray-black);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <!--This is the head section-->
+    <!-- <style> ... </style> -->
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <header class="home-header">
+          <header data-thq="thq-navbar" class="home-navbar">
+            <span class="home-logo">REBOT</span>
+            <div
+              data-thq="thq-navbar-nav"
+              data-role="Nav"
+              class="home-desktop-menu"
+            >
+              <nav
+                data-thq="thq-navbar-nav-links"
+                data-role="Nav"
+                class="home-nav"
+              >
+                <button class="home-button button-clean button">About</button>
+                <button class="home-button1 button-clean button">
+                  Features
+                </button>
+                <button class="home-button2 button-clean button">
+                  Pricing
+                </button>
+                <button class="home-button3 button-clean button">Team</button>
+                <button class="home-button4 button-clean button">Blog</button>
+              </nav>
+            </div>
+            <div data-thq="thq-navbar-btn-group" class="home-btn-group">
+              <div class="home-socials">
+                <button class="social button">
+                  <img
+                    alt="image"
+                    src="public/Icons/twitter.svg"
+                    class="home-image"
+                  />
+                </button>
+                <button class="social button">
+                  <img
+                    alt="image"
+                    src="public/Icons/discord.svg"
+                    class="home-image01"
+                  />
+                </button>
+              </div>
+            </div>
+            <div data-thq="thq-burger-menu" class="home-burger-menu">
+              <button class="button home-button5">
+                <svg viewBox="0 0 1024 1024" class="home-icon">
+                  <path
+                    d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div data-thq="thq-mobile-menu" class="home-mobile-menu">
+              <div
+                data-thq="thq-mobile-menu-nav"
+                data-role="Nav"
+                class="home-nav1"
+              >
+                <div class="home-container1">
+                  <span class="home-logo1">Character</span>
+                  <div data-thq="thq-close-menu" class="home-menu-close">
+                    <svg viewBox="0 0 1024 1024" class="home-icon02">
+                      <path
+                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <nav
+                  data-thq="thq-mobile-menu-nav-links"
+                  data-role="Nav"
+                  class="home-nav2"
+                >
+                  <span class="home-text">About</span>
+                  <span class="home-text001">Features</span>
+                  <span class="home-text002">Pricing</span>
+                  <span class="home-text003">Team</span>
+                  <span class="home-text004">Blog</span>
+                </nav>
+                <div class="home-container2">
+                  <button class="home-login button">Login</button>
+                  <button class="button">Register</button>
+                </div>
+              </div>
+              <div class="home-icon-group">
+                <svg viewBox="0 0 950.8571428571428 1024" class="home-icon04">
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg viewBox="0 0 877.7142857142857 1024" class="home-icon06">
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path></svg
+                ><svg viewBox="0 0 602.2582857142856 1024" class="home-icon08">
+                  <path
+                    d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </header>
+        </header>
+        <section class="home-hero">
+          <div class="home-heading">
+            <h1 class="home-header01">AI FOR REAL ESTATE CUSTOMER RETENTION</h1>
+            <p class="home-caption">
+              <span class="home-text005">Transfor Real Estate with AI</span>
+              <br />
+              <br />
+              <span>RETENT CUSTOMERS OF ALL DIVERSITY</span>
+              <br />
+            </p>
+          </div>
+          <button id="loginButton" class="home-view button">LOGIN</button>
+          <div class="home-buttons"></div>
+        </section>
+        <img
+          alt="image"
+          src="public/hero-divider-1500w.png"
+          class="home-divider-image"
+        />
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+              <span class="close-button">&times;</span>
+              <iframe src="login.html" style="width: 100%; height: 100%; border: none;"></iframe>
+          </div>
+      </div>
+      <script>
+        var modal = document.getElementById("loginModal");
+        var btn = document.getElementById("loginButton");
+        var span = document.getElementsByClassName("close-button")[0];
+      
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <style>
+      .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.4);
+      }
+      .modal-content {
+          background-color: #fefefe;
+          margin: 15% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 400px;
+          height: 300px;
+      }
+      .close-button {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+      }
+      .close-button:hover,
+      .close-button:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+      }
+  </style>
+    
+        <section class="home-description">
+          <div class="home-container3">
+            <div class="home-description01">
+              <div class="home-content">
+                <p class="home-paragraph">
+                  <br />
+                  <span>Welcome to REBOT,</span>
+                  <br />
+                  <span>
+                    where cutting-edge artificial intelligence meets real estate
+                    innovation. Our platform leverages advanced AI algorithms to
+                    analyze customer behavior and preferences, helping real
+                    estate companies gain invaluable insights into their target
+                    audience.
+                  </span>
+                </p>
+                <p class="home-paragraph1">
+                  <span>
+                    Explore how our AI-driven solutions can transform your real
+                    estate operations and drive success in a competitive market.
+                  </span>
+                  <br />
+                  <span></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-cards">
+          <div class="home-row">
+            <div class="home-card">
+              <div class="home-avatar">
+                <img
+                  alt="image"
+                  src="public/Avatars/avatar.svg"
+                  class="home-avatar1"
+                />
+              </div>
+              <div class="home-main">
+                <div class="home-content01">
+                  <h2 class="home-header02">
+                    <span>12+ features</span>
+                    <br />
+                    <br />
+                  </h2>
+                  <p class="home-description02">
+                    <span></span>
+                    <br />
+                    <span>
+                      By integrating detailed customer profiles and historical
+                      data, we provide predictive analytics that not only
+                      forecasts purchase decisions but also identifies potential
+                      churn risks.
+                    </span>
+                  </p>
+                </div>
+                <button class="home-learn button">
+                  <span class="home-text023">Learn more</span>
+                  <img
+                    alt="image"
+                    src="public/Icons/arrow.svg"
+                    class="home-image02"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="home-card01">
+              <div class="home-avatar2">
+                <img
+                  alt="image"
+                  src="public/Avatars/default-avatar.svg"
+                  class="home-avatar3"
+                />
+              </div>
+              <div class="home-main1">
+                <div class="home-content02">
+                  <h2 class="home-header03">
+                    Revolutionizing Real Estate with AI
+                  </h2>
+                  <p class="home-description03">
+                    we are transforming how real estate businesses approach
+                    customer retention through our innovative AI-powered model.
+                    Traditional methods often fall short in leveraging the full
+                    potential of data, leaving gaps in customer understanding
+                    and marketing effectiveness.
+                  </p>
+                </div>
+                <button class="home-learn1 button">
+                  <span class="home-text024">Learn more</span>
+                  <img
+                    alt="image"
+                    src="public/Icons/arrow-2.svg"
+                    class="home-image03"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="home-card02">
+            <div class="home-avatar4">
+              <img
+                alt="image"
+                src="public/Avatars/light-avatar.svg"
+                class="home-avatar5"
+              />
+            </div>
+            <div class="home-row1">
+              <div class="home-main2">
+                <div class="home-content03">
+                  <h2 class="home-header04">Tailored Marketing Strategies</h2>
+                  <p class="home-description04">
+                    This proactive approach ensures that real estate companies
+                    can not only meet but exceed customer expectations, reducing
+                    the risk of churn and maximizing opportunities for
+                    successful property sales.
+                  </p>
+                </div>
+                <button class="home-learn2 button">
+                  <span class="home-text025">Learn more</span>
+                  <img
+                    alt="image"
+                    src="public/Icons/arrow-2.svg"
+                    class="home-image04"
+                  />
+                </button>
+              </div>
+              <img
+                alt="image"
+                src="public/group2-900w.png"
+                class="home-image05"
+              />
+            </div>
+          </div>
+          <div class="home-content04">
+            <span class="home-caption01">collection</span>
+            <div class="home-heading01">
+              <h2 class="home-header05">TOP 5 AGENTS</h2>
+            </div>
+          </div>
+        </section>
+        <section class="home-collection">
+          <div class="home-main3">
+            <div class="home-card03"><div class="home-image06"></div></div>
+            <div class="home-card04">
+              <div class="home-image07">
+                <img
+                  alt="image"
+                  src="public/Characters/per1-400h.png"
+                  class="home-image08"
+                />
+              </div>
+              <div class="home-content05">
+                <span class="home-caption02">1. VIGNESH</span>
+              </div>
+            </div>
+            <div class="home-card05">
+              <div class="home-image09">
+                <img
+                  alt="image"
+                  src="public/Characters/character-3.svg"
+                  class="home-image10"
+                />
+              </div>
+              <div class="home-content06">
+                <span class="home-caption03">2.ARUN KUMAR</span>
+              </div>
+            </div>
+            <div class="home-card06"></div>
+            <div class="home-card07">
+              <div class="home-image11">
+                <img
+                  alt="image"
+                  src="public/Characters/character-5.svg"
+                  class="home-image12"
+                />
+              </div>
+              <div class="home-content07">
+                <span class="home-caption04">3. VASUDEVAN</span>
+              </div>
+            </div>
+            <div class="home-card08">
+              <div class="home-image13">
+                <img
+                  alt="image"
+                  src="public/Characters/character-6.svg"
+                  class="home-image14"
+                />
+              </div>
+              <div class="home-content08">
+                <span class="home-caption05">4. VASANTH</span>
+              </div>
+            </div>
+            <div class="home-card09">
+              <div class="home-image15">
+                <img
+                  alt="image"
+                  src="public/Characters/character-7.svg"
+                  class="home-image16"
+                />
+              </div>
+              <div class="home-content09">
+                <span class="home-caption06">5. ZYVAN</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-project">
+          <div class="home-understand">
+            <div class="home-content10">
+              <span class="home-caption07">Project</span>
+              <div class="home-heading02">
+                <h2 class="home-header06">Understand the project</h2>
+                <p class="home-header07">
+                  <span class="home-text026">
+                    Our project leverages advanced AI to revolutionize customer
+                    retention in the real estate sector. By analyzing detailed
+                    customer profiles and behavior, our model predicts purchase
+                    decisions and identifies churn risks with high precision.
+                    This proactive approach enables real estate companies to
+                    tailor marketing strategies effectively, enhancing
+                    engagement and boosting property sales. Discover how our
+                    AI-driven insights can transform your real estate business.
+                  </span>
+                  <br class="home-text027" />
+                  <br />
+                </p>
+              </div>
+              <button class="home-view1 button-link button">
+                <span>Learn More</span>
+                <img
+                  alt="image"
+                  src="public/Icons/arrow.svg"
+                  class="home-image17"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="home-mining">
+            <div class="home-container4">
+              <img
+                alt="image"
+                src="public/group%202422.svg"
+                class="home-image18"
+              />
+              <p class="home-header08">
+                <br />
+                <br />
+                <span>
+                  Step 3: Based on these predictions, personalized marketing
+                  strategies and engagement plans are developed to address
+                  individual customer needs and increase the likelihood of
+                  successful property transactions.
+                </span>
+                <br />
+                <br />
+                <span>
+                  Step 4: Continuous monitoring and data integration allow the
+                  system to adapt and refine its strategies, optimizing customer
+                  interactions and retention efforts over time.
+                </span>
+                <br />
+              </p>
+            </div>
+            <div class="home-content11">
+              <span class="home-caption08">Project</span>
+              <div class="home-heading03">
+                <h2 class="home-header09">
+                  <span>How the Software</span>
+                  <br />
+                  <span>Helps</span>
+                  <br />
+                </h2>
+                <p class="home-header10">
+                  <span>
+                    Step 1: Customers are directed to the right agent based on
+                    their specific needs and preferences, ensuring a tailored
+                    and efficient initial interaction.
+                  </span>
+                  <br class="home-text042" />
+                  <br />
+                  <br class="home-text044" />
+                  <br />
+                  <span>
+                    Step 2: The AI model analyzes customer behavior and
+                    preferences to predict their buying intentions and potential
+                    for retention to the respective agent.
+                  </span>
+                  <br class="home-text047" />
+                  <br />
+                  <br class="home-text049" />
+                  <br />
+                  <br />
+                </p>
+              </div>
+              <button class="home-view2 button-link button">
+                <span>Learn More</span>
+                <img
+                  alt="image"
+                  src="public/Icons/arrow.svg"
+                  class="home-image19"
+                />
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="home-roadmap">
+          <div class="home-heading04">
+            <h2 class="home-header11">Roadmap</h2>
+            <p class="home-header12">
+              Overview of our project, from inception to future developments.
+            </p>
+          </div>
+          <div class="home-list">
+            <div class="home-step">
+              <span class="home-caption09">01</span>
+              <div class="home-heading05">
+                <h2 class="home-header13">Project Launch</h2>
+                <p class="home-header14">
+                  <span>Domain knowledge on the real estate sector.</span>
+                  <br />
+                  <span>Improve the customer retention rate.</span>
+                  <br />
+                  <span>
+                    Establish clear goals and objectives for the AI model.
+                  </span>
+                  <br />
+                  <span>
+                    Identify key requirements and pain points in the real estate
+                    sector. Design the framework for the AI model based on
+                    research findings.
+                  </span>
+                  <br />
+                </p>
+              </div>
+            </div>
+            <div class="home-step1">
+              <span class="home-caption10">02</span>
+              <div class="home-heading06">
+                <h2 class="home-header15">
+                  <span>Model Development</span>
+                  <br />
+                </h2>
+                <p class="home-header16">
+                  <span>
+                    Develop and train the AI model using machine learning
+                    algorithms.
+                  </span>
+                  <br />
+                  <span>
+                    Test the model for accuracy and performance.Create an
+                    intuitive user interface for easy interaction with the
+                    model.
+                  </span>
+                  <br />
+                  <span>
+                    Explore opportunities for expanding the model’s use and
+                    impact.
+                  </span>
+                  <br />
+                  <span>
+                    Identify and plan for future enhancements and additional
+                    features.
+                  </span>
+                  <br />
+                  <br />
+                </p>
+              </div>
+            </div>
+            <div class="home-step2">
+              <span class="home-caption11">03</span>
+              <div class="home-heading07">
+                <h2 class="home-header17">
+                  <span>Hosting Server&nbsp;</span>
+                  <br />
+                  <br />
+                </h2>
+                <p class="home-header18">
+                  <span>
+                    Conduct a final review of the system and make necessary
+                    adjustments.
+                  </span>
+                  <br />
+                  <span>
+                    Prepare training materials and documentation for users
+                  </span>
+                  <br />
+                  <span>Python anywhere host is used.</span>
+                  <br />
+                  <span>Make the AI model available to users.</span>
+                  <br />
+                  <span>
+                    Implement updates and optimizations based on feedback and
+                    performance data.
+                  </span>
+                  <br />
+                </p>
+              </div>
+            </div>
+            <div class="home-step3">
+              <span class="home-caption12">04</span>
+              <div class="home-heading08">
+                <h2 class="home-header19">
+                  <span>Post-Launch Support</span>
+                  <br />
+                </h2>
+                <p class="home-header20">
+                  <span>Provide support for users and address any issues</span>
+                  <br />
+                </p>
+                <div class="home-benefits">
+                  <div class="home-item">
+                    <img
+                      alt="image"
+                      src="public/Icons/people.svg"
+                      class="home-image20"
+                    />
+                    <p class="home-header21">
+                      <span>Gather user feedback.</span>
+                      <br />
+                    </p>
+                  </div>
+                  <div class="home-container5">
+                    <div class="home-container6">
+                      <div class="home-item1">
+                        <img
+                          alt="image"
+                          src="public/Icons/paper.svg"
+                          class="home-image21"
+                        />
+                      </div>
+                    </div>
+                    <p class="home-header22">
+                      <span>&nbsp; &nbsp; Identify areas for improvement.</span>
+                      <br />
+                    </p>
+                  </div>
+                  <div class="home-item2">
+                    <img
+                      alt="image"
+                      src="public/Icons/checklist.svg"
+                      class="home-image22"
+                    />
+                    <p class="home-header23">
+                      <span>
+                        Implement updates and optimizations based on feedback
+                        and performance data.
+                      </span>
+                      <br />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-join-us">
+          <div class="home-content12">
+            <div class="home-main4">
+              <div class="home-heading09">
+                <h2 class="home-header24">DONT LEAVE BACK YOUR CUSTOMERS.</h2>
+                <p class="home-caption13">
+                  ENTER THE DATA AND PLAN YOUR STRATEGY TO HOLD BACK YOUR
+                  CUSTOMERS
+                </p>
+              </div>
+              <button class="home-view3 button">LOGIN&nbsp;</button>
+            </div>
+            <img
+              alt="image"
+              src="public/group%202273.svg"
+              class="home-image23"
+            />
+          </div>
+        </section>
+        <section class="home-faq">
+          <h2 class="home-header25">We have all the answers</h2>
+          <div class="home-accordion">
+            <div data-role="accordion-container" class="home-element accordion">
+              <div class="home-content13">
+                <span class="home-header26">
+                  Q1: What is the purpose of your AI model in real estate?
+                </span>
+                <span data-role="accordion-content" class="home-description05">
+                  A1: Our AI model is designed to enhance customer retention and
+                  improve property sales by predicting customer behavior. It
+                  analyzes extensive data to provide insights into customer
+                  preferences, buying intentions, and potential churn, enabling
+                  real estate companies to tailor their marketing strategies
+                  effectively.
+                </span>
+              </div>
+              <div class="home-icon-container">
+                <svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-closed"
+                  class="home-icon10"
+                >
+                  <path
+                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-open"
+                  class="home-icon12"
+                >
+                  <path
+                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div
+              data-role="accordion-container"
+              class="home-element1 accordion"
+            >
+              <div class="home-content14">
+                <span class="home-header27">
+                  <span>
+                    Q2: What are the benefits of using your AI model for real
+                    estate companies?
+                  </span>
+                  <br />
+                </span>
+                <span data-role="accordion-content" class="home-description06">
+                  <span>
+                    A2:&nbsp; The AI model offers several benefits, including
+                    improved customer retention, more effective marketing
+                    strategies, and increased sales potential. By providing
+                    actionable insights and predicting customer behavior, it
+                    helps real estate companies make data-driven decisions and
+                    optimize their marketing efforts.
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div class="home-icon-container1">
+                <svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-closed"
+                  class="home-icon14"
+                >
+                  <path
+                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-open"
+                  class="home-icon16"
+                >
+                  <path
+                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div
+              data-role="accordion-container"
+              class="home-element2 accordion"
+            >
+              <div class="home-content15">
+                <span class="home-header28">
+                  Q3: What kind of data does your AI model use to make
+                  predictions?
+                </span>
+                <span data-role="accordion-content" class="home-description07">
+                  <span>
+                    A3: The AI model utilizes a comprehensive dataset that
+                    includes customer demographics, property history,
+                    socio-economic factors, and past behavior. This detailed
+                    information is gathered through surveys and questionnaires
+                    to ensure accurate predictions and relevant insights.
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div class="home-icon-container2">
+                <svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-closed"
+                  class="home-icon18"
+                >
+                  <path
+                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-open"
+                  class="home-icon20"
+                >
+                  <path
+                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div
+              data-role="accordion-container"
+              class="home-element3 accordion"
+            >
+              <div class="home-content16">
+                <span class="home-header29">
+                  <span>
+                    Q4 : What kind of results can I expect from using your AI
+                    model?
+                  </span>
+                  <br />
+                </span>
+                <span data-role="accordion-content" class="home-description08">
+                  <span>
+                    A4:&nbsp; By using our AI model, you can expect improved
+                    customer retention rates, enhanced marketing efficiency, and
+                    increased sales potential. The model provides actionable
+                    insights and predictive analytics that help optimize your
+                    strategies and achieve better business outcomes.
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div class="home-icon-container3">
+                <svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-closed"
+                  class="home-icon22"
+                >
+                  <path
+                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-open"
+                  class="home-icon24"
+                >
+                  <path
+                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div
+              data-role="accordion-container"
+              class="home-element4 accordion"
+            >
+              <div class="home-content17">
+                <span class="home-header30">
+                  <span>
+                    Q5: Can your AI model be customized for specific business
+                    needs?
+                  </span>
+                  <br />
+                </span>
+                <span data-role="accordion-content" class="home-description09">
+                  A5: Yes, our AI model is highly customizable. We can tailor
+                  the model to fit your specific business requirements,
+                  including adjusting the features, data inputs, and output
+                  reports to align with your unique objectives and market
+                  conditions.
+                </span>
+              </div>
+              <div class="home-icon-container4">
+                <svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-closed"
+                  class="home-icon26"
+                >
+                  <path
+                    d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 1024 1024"
+                  data-role="accordion-icon-open"
+                  class="home-icon28"
+                >
+                  <path
+                    d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-get-yours">
+          <div class="home-row2">
+            <div class="home-column">
+              <div class="home-card10">
+                <img
+                  alt="image"
+                  src="public/Characters/character-9.svg"
+                  class="home-image24"
+                />
+              </div>
+            </div>
+            <div class="home-column1">
+              <div class="home-card11">
+                <img
+                  alt="image"
+                  src="public/Characters/character-4.svg"
+                  class="home-image25"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="home-column2">
+            <div class="home-card12">
+              <div class="home-content18">
+                <h2 class="home-header31">FEEDBACK</h2>
+                <p class="home-description10">
+                  SHARE YOUR VALUABLE FEEDBACK WITH US !
+                </p>
+              </div>
+              <button class="home-button6 button">MAIL US @</button>
+            </div>
+          </div>
+        </section>
+        <footer class="home-footer">
+          <div class="home-main5">
+            <div class="home-branding">
+              <div class="home-heading10">
+                <h2 class="home-logo2">REBOT&nbsp;</h2>
+              </div>
+              <div class="home-socials1">
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-twitter1 social button"
+                >
+                  <img
+                    alt="image"
+                    src="public/Icons/twitter.svg"
+                    class="home-image26"
+                  />
+                </a>
+                <a
+                  href="https://discord.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-discord1 social button"
+                >
+                  <img
+                    alt="image"
+                    src="public/Icons/discord.svg"
+                    class="home-image27"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="home-list1">
+              <h3 class="home-heading11">Site</h3>
+              <div class="home-items">
+                <button class="home-link button-clean button">About</button>
+                <button class="home-link1 button-clean button">
+                  Collection
+                </button>
+                <button class="home-link2 button-clean button">Roadmap</button>
+                <button class="home-link3 button-clean button">Features</button>
+              </div>
+            </div>
+            <div class="home-list2">
+              <h3 class="home-heading12">Company</h3>
+              <div class="home-items1">
+                <button class="home-link4 button-clean button">Team</button>
+                <button class="home-link5 button-clean button">Press</button>
+                <button class="home-link6 button-clean button">Terms</button>
+                <button class="home-link7 button-clean button">
+                  Limitations
+                </button>
+                <button class="home-link8 button-clean button">Licenses</button>
+              </div>
+            </div>
+            <div class="home-links"></div>
+            <div class="home-socials2">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="home-twitter2 social button"
+              >
+                <img
+                  alt="image"
+                  src="public/Icons/twitter.svg"
+                  class="home-image28"
+                />
+              </a>
+              <a
+                href="https://discord.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="home-discord2 social button"
+              >
+                <img
+                  alt="image"
+                  src="public/Icons/discord.svg"
+                  class="home-image29"
+                />
+              </a>
+            </div>
+          </div>
+        </footer>
+        <div>
+          <div class="home-container8">
+            <script>
+              /*
+               Accordion - Code Embed
+               */
+               const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
+               const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
+               const accordionIconsClosed = document.querySelectorAll('[data-role='accordion-icon-closed']'); // All accordion closed icons
+               const accordionIconsOpen = document.querySelectorAll('[data-role='accordion-icon-open']'); // All accordion open icons
+
+               accordionContents.forEach((accordionContent) => {
+                   accordionContent.style.display = 'none'; //Hides all accordion contents
+               });
+
+               accordionIconsClosed.forEach((icon) => {
+                 icon.style.display = 'flex'
+               })
+
+               accordionIconsOpen.forEach((icon) => {
+                 icon.style.display = 'none'
+               })
+
+               accordionContainers.forEach((accordionContainer, index) => {
+                   accordionContainer.addEventListener('click', () => {
+                       if (accordionContents[index].style.display === 'flex') {
+                           // If the accordion is already open, close it
+                           accordionContents[index].style.display = 'none';
+                           accordionIconsClosed[index].style.display = 'flex';
+                           accordionIconsOpen[index].style.display = 'none'
+                       } else {
+                           // If the accordion is closed, open it
+                           accordionContents.forEach((accordionContent) => {
+                               accordionContent.style.display = 'none'; //Hides all accordion contents
+                           });
+
+                           accordionIconsClosed.forEach((accordionIcon) => {
+                               accordionIcon.style.display = 'flex'; // Resets all icon transforms to 0deg (default)
+                           });
+
+                           accordionIconsOpen.forEach((accordionIcon) => {
+                             accordionIcon.style.display = 'none';
+                           })
+
+                           accordionContents[index].style.display = 'flex'; // Shows accordion content
+                           accordionIconsClosed[index].style.display = 'none'; // Rotates accordion icon 180deg
+                           accordionIconsOpen[index].style.display = 'flex';
+                       }
+                   });
+               });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+
+  </body>
+</html>

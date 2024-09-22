@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: auto; /* Added overflow property */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .chatbot-button {
+            display: block;
+            width: 150px;
+            padding: 10px;
+            text-align: center;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .chatbot-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Customer Details</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>CustomerID</th>
+            <th>Age</th>
+            <th>Profession</th>
+            <th>IncomeLevel</th>
+            <th>Location</th>
+            <th>PropertyPrice</th>
+            <th>PropertySize</th>
+            <th>PropertyType</th>
+            <th>NumberOfBedrooms</th>
+            <th>PropertyAmenities</th>
+            <th>PropertyCondition Ascending 1</th>
+            <th>BuyingHistory</th>
+            <th>MarketTrends</th>
+            <th>InterestRates</th>
+            <th>NumberOfDependents</th>
+            <th>Education</th>
+            <th>SelfEmployed</th>
+            <th>IncomePerAnnum</th>
+            <th>LoanAmount</th>
+            <th>LoanTerm</th>
+            <th>CIBILScore</th>
+            <th>ResidentialAssetsValue</th>
+            <th>CommercialAssetsValue</th>
+            <th>LuxuryAssetsValue</th>
+            <th>BankAssetValue</th>
+            <th>Chat Bot</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>123456</td>
+            <td>35</td>
+            <td>Marketing Manager</td>
+            <td>Medium</td>
+            <td>Suburban</td>
+            <td>High</td>
+            <td>Large</td>
+            <td>Luxury</td>
+            <td>4</td>
+            <td>yes</td>
+            <td>excellent</td>
+            <td>multiple</td>
+            <td>upward</td>
+            <td>low</td>
+            <td>1</td>
+            <td>Masters</td>
+            <td>Yes</td>
+            <td>1200000.00</td>
+            <td>500000.00</td>
+            <td>24</td>
+            <td>800</td>
+            <td>3000000.00</td>
+            <td>15000000.00</td>
+            <td>25000000.00</td>
+            <td>10000000.00</td>
+            <td><a href="chatbot.html" class="chatbot-button">Chat Bot</a></td>
+        </tr>
+       <tr>
+    <td>Jane Smith</td>
+    <td>789012</td>
+    <td>40</td>
+    <td>IT Consultant</td>
+    <td>High</td>
+    <td>Urban</td>
+    <td>Medium</td>
+    <td>Medium</td>
+    <td>Apartment</td>
+    <td>2</td>
+    <td>yes</td>
+    <td>good</td>
+    <td>single</td>
+    <td>stable</td>
+    <td>medium</td>
+    <td>2</td>
+    <td>Bachelor's</td>
+    <td>No</td>
+    <td>1000000.00</td>
+    <td>400000.00</td>
+    <td>20</td>
+    <td>750</td>
+    <td>2000000.00</td>
+    <td>10000000.00</td>
+    <td>15000000.00</td>
+    <td>8000000.00</td>
+    <td><a href="chatbot.html" class="chatbot-button">Chat Bot</a></td>
+</tr>
+
+<tr>
+    <td>Michael Johnson</td>
+    <td>345678</td>
+    <td>45</td>
+    <td>Finance Director</td>
+    <td>High</td>
+    <td>Urban</td>
+    <td>Very High</td>
+    <td>Large</td>
+    <td>Villa</td>
+    <td>5</td>
+    <td>yes</td>
+    <td>fair</td>
+    <td>multiple</td>
+    <td>stable</td>
+    <td>high</td>
+    <td>3</td>
+    <td>PhD</td>
+    <td>No</td>
+    <td>1500000.00</td>
+    <td>600000.00</td>
+    <td>25</td>
+    <td>850</td>
+    <td>5000000.00</td>
+    <td>20000000.00</td>
+    <td>30000000.00</td>
+    <td>12000000.00</td>
+    <td><a href="chatbot.html" class="chatbot-button">Chat Bot</a></td>
+</tr>
+
+    </table>
+</div>
+
+</body>
+</html>

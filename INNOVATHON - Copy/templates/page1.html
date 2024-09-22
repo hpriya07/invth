@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map with Markers and Info Box</title>
+    <!-- Include Leaflet CSS and JavaScript files -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Define the map's CSS styles -->
+    <style>
+        /* Set the map container's size */
+        #map {
+            width: 70%;
+            height: 600px;
+            float: left;
+        }
+
+        /* Style for the info box */
+        #info-box {
+            width: 20%;
+            height: 240px;
+            float: left;
+            padding: 10px;
+            background-color: #f3f3f3;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Style for the "Confirm Location" button */
+        #confirm-button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>GROUND WATER QUALITY ASSESSMENT- KNOW YOUR WATER QUALITY!</h1>
+    <p>KINDLY CLICK ON YOUR DESIRED MARKER</p>
+    <!-- Create a div to hold the map -->
+    <div id="map"></div>
+
+    <!-- Create a div for the information box -->
+    <div id="info-box">
+        <h2>Marker Information</h2>
+        <div id="info-content">
+            <p><strong>Place Name:</strong> <span id="place-name"></span></p>
+            <p><strong>Latitude:</strong> <span id="latitude"></span></p>
+            <p><strong>Longitude:</strong> <span id="longitude"></span></p>
+            <p><strong>Water Quality:</strong> <span id="water-quality"></span></p>
+            <!-- Add the "Confirm Location" button here -->
+            <button id="confirm-button">Confirm Location</button>
+        </div>
+    </div>
+
+    <script>
+        // Create a map object and set its center and zoom level
+        var map = L.map('map').setView([13.0827, 80.2707], 12); // Chennai's coordinates
+
+        // Add a base map layer (you can use different tile layers)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Define an array of marker coordinates (latitude and longitude)
+        var markerCoordinates = [
+            [13.0827, 80.2707], // Chennai
+            [12.9433, 80.2263], // Example marker 1
+            [13.0605, 80.2824], // Example marker 2
+            [13.0748, 80.2626],
+     	    [12.9828, 80.2639],
+            [12.9264, 80.2556],
+            [12.9344, 80.2569],
+            [12.9789, 80.2658],
+            [12.9866, 80.2499],
+            [13.1054, 80.2844],
+            [12.9569, 80.2606],
+[13.1275,80.2816],
+[13.0381,80.1342],
+[13.0674,80.2376],
+[13.1135,80.2961],
+[13.1227,80.2960],
+[13.1846,80.3084],
+[13.1454,80.0873],
+[13.0903,80.2802],
+[13.0551,80.2221],
+[13.0236,80.2235],
+[12.8377,79.7034],
+[13.010,80.2156],
+[13.0235,80.2237],
+[13.0238,80.2000],
+[13.0191,80.2049],
+[12.9845,80.1747]// Example marker 3
+            // Add more coordinates as needed
+        ];
+
+        // Define an array of place names for markers
+        var placeNames = [
+            "CHENNAI",
+            "BLUE BEACH ROAD",
+            "CHEPAUK",
+            "EGMORE",
+	    "ELEGANT FLAT",
+            "INJAMBAKKAM",
+	    "KCG GARDEN",
+	    "SEASHORE APARTMENT",
+            "TARAMANI",
+            "VALLALARNAGAR",
+            "VISHRANTI OLD AGE",
+"TONDIARPET",
+"NATESAN NAGAR",
+"ASIS NAGAR",
+"RAYAPURAM",
+"PUDUMANIKUPPAM",
+"THIRUMOORTHY NAGAR",
+"BRINDAVAN NAGAR",
+"SOWCARPET",
+"KODAMBAKKAM",
+"SAIDAPET",
+"ANNA SALAI",
+"GUINDY",
+"JAFFERKHANPET",
+"EKKADUTHANGAL",
+"AMBAL NAGAR",
+"MEENAMBAKKAM"
+
+
+            // Add more place names as needed
+        ];
+
+        // Initialize the info box content with empty values
+        updateInfoBox('', {});
+
+        // Event listener for the "Confirm Location" button
+        // Event listener for the "Confirm Location" button
+document.getElementById('confirm-button').addEventListener('click', function () {
+    const latitude = document.getElementById('latitude').textContent;
+    const longitude = document.getElementById('longitude').textContent;
+
+    // Send a POST request to the Python server
+    fetch('/add_coordinates', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            latitude: parseFloat(latitude),
+            longitude: parseFloat(longitude)
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.message); // Output success message from the server
+        // Redirect the user to the new webpage
+        window.location.href = `/page2.html?latitude=${latitude}&longitude=${longitude}&total=${data.total}&a=${data.a}`;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
+        // Loop through the markerCoordinates array and add markers to the map
+        for (var i = 0; i < markerCoordinates.length; i++) {
+            var marker = L.marker(markerCoordinates[i]).addTo(map);
+
+            // Attach custom data to each marker
+            marker.myData = {
+                latitude: markerCoordinates[i][0],
+                longitude: markerCoordinates[i][1],
+                waterQuality: 'Some value' // Replace with actual water quality data
+            };
+
+            // Bind a popup to each marker with place names
+            var placeName = placeNames[i];
+            marker.bindPopup(placeName);
+
+            // Event handler for marker click
+            marker.on('click', createMarkerClickHandler(placeName, marker.myData));
+        }
+
+        // Function to create a marker click handler with closure
+        function createMarkerClickHandler(placeName, data) {
+            return function (e) {
+                updateInfoBox(placeName, data);
+            };
+        }
+
+        // Function to update the info box content
+        function updateInfoBox(placeName, data) {
+            document.getElementById('place-name').textContent = placeName;
+            document.getElementById('latitude').textContent = data.latitude;
+            document.getElementById('longitude').textContent = data.longitude;
+            document.getElementById('water-quality').textContent = data.waterQuality;
+        }
+    </script>
+</body>
+</html>

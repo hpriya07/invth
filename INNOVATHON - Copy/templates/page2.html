@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Quality Results</title>
+    <style>
+        /* Increase the font size for the <p> elements */
+        p {
+            font-size: 20px; /* You can adjust the size as needed */
+        }
+        #absolute_box{
+    border-collapse: collapse;
+    width: 27% /* Set the width of the container to your desired value in pixels */
+    border: 1px solid #ddd; /* Slightly lighter border color */
+    font-family: Arial, sans-serif;
+    margin-bottom:20px;
+    float: right; /* Float the table to the right */
+    margin-right: 250px;
+}
+#predictive_box{
+    border-collapse: collapse;
+    width: 27%; /* Wider table for standard appearance */
+    border: 1px solid #ddd; /* Slightly lighter border color */
+    font-family: Arial, sans-serif;
+    margin-bottom:20px;
+    float: right; /* Float the table to the right */
+    margin-right: 150px;
+    margin-top:120px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px; /* Slightly larger cell padding for readability */
+    text-align: center; /* Center align text in cells */
+    font-size: 20px;
+}
+
+
+tr:nth-child(even) {
+    background-color: #6FB9E3; /* Light gray for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #ECF5FB;/* White background for odd rows */
+}
+
+/* Hover effect for better user interaction */
+tr:hover {
+    background-color: #e6e6e6; /* Slightly darker on hover */
+}
+.image-box{
+            float: left;
+            margin-right: 20px; /* Adjust the margin to
+        
+    </style>
+</head>
+<body>
+    <h1>Water Quality Results</h1>
+    <p>Water quality: <span id="waterQuality"></span></p>
+    <p>Sterilisation required?: <span id="sterilise"></span></p>
+<div class="image-box">
+    <img src="/{{ image_filename }}" alt="Water Quality Parameters">
+</div>
+    
+
+
+    <div class="clearfix"></div>
+
+    <div id="absolute_box">
+      <p>The advised quality level</p>
+      <table border="1">
+    <tr>
+        <th>SNo</th>
+        <th>ph</th>
+        <th>chlorine</th>
+        <th>fluorine</th>
+        <th>nitrate</th>
+        <th>sulphate</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>7</td>
+        <td>200</td>
+	<td>1.1</td>
+	<td>10</td>
+	<td>25</td>
+    </tr>
+</table>
+  </div> 
+  <div id="predictive_box">
+      <p>Predicted changes in the upcoming years</p>
+      <table border="1">
+    <tr>
+        <th>YEAR</th>
+        <th>ph</th> <th>chlorine</th> <th>fluorine</th> <th>nitrate</th> <th>sulphate</th>
+
+    </tr>
+    <tr>
+        <td>2024</td>
+	<td id="yr24Cell">{{ yr24 }}</td>
+        <td id="yr24cl1">{{ cl1 }}</td>
+	<td id="yr24fl1">{{ fl1 }}</td>
+ 	<td id="yr24ni1">{{ ni1 }}</td>
+	<td id="yr24su1">{{ su1 }}</td>
+    </tr>
+    <tr>
+        <td>2025</td>
+	<td id="yr25Cell">{{ yr25 }}</td>
+        <td id="yr25cl2">{{ cl2 }}</td>
+	<td id="yr25fl2">{{ fl2 }}</td>
+ 	<td id="yr25ni2">{{ ni2 }}</td>
+	<td id="yr25su2">{{ su2 }}</td>
+    </tr>
+    <tr>
+        <td>2026</td>
+	<td id="yr26Cell">{{ yr25 }}</td>
+        <td id="yr26cl3">{{ cl3 }}</td>
+	<td id="yr26fl3">{{ fl3 }}</td>
+ 	<td id="yr26ni3">{{ ni3 }}</td>
+	<td id="yr26su3">{{ su3 }}</td>
+    </tr>
+</table>
+  </div>
+
+    
+    <!-- Other content on the page -->
+
+    <script>
+        // Get the water quality level and sterilization requirement passed from Flask
+        var waterQuality = "{{ water_quality }}";
+        var sterilise = "{{ sterilise }}";
+        var yr24 = "{{ yr24 }}";
+        var cl1 = "{{ cl1 }}";
+        var fl1 = "{{ fl1 }}";
+	var fl1 = "{{ ni1 }}";
+	var fl1 = "{{ su1 }}";
+
+        // Update the content of the HTML elements
+        document.getElementById('waterQuality').textContent = waterQuality;
+        document.getElementById('sterilise').textContent = sterilise;
+        document.getElementById('yr24Cell').textContent = yr24;
+        document.getElementById('yr24cl1').textContent = cl1;
+	document.getElementById('yr24fl1').textContent = fl1;
+	document.getElementById('yr24ni1').textContent = ni1;
+	document.getElementById('yr24su1').textContent = su1;
+
+	document.getElementById('yr25Cell').textContent = yr26;
+        document.getElementById('yr25cl2').textContent = cl2;
+	document.getElementById('yr25fl2').textContent = fl2;
+	document.getElementById('yr25ni2').textContent = ni2;
+	document.getElementById('yr25su2').textContent = su2;
+
+	document.getElementById('yr26Cell').textContent = yr26;
+        document.getElementById('yr26cl3').textContent = cl3;
+	document.getElementById('yr26fl3').textContent = fl3;
+	document.getElementById('yr26ni3').textContent = ni3;
+	document.getElementById('yr26su3').textContent = su3;
+    </script>
+</body>
+</html>
